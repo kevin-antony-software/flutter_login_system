@@ -1,0 +1,46 @@
+{
+  "project_info": {
+    "project_number": "607616925298",
+    "project_id": "login-system-12c45",
+    "storage_bucket": "login-system-12c45.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:607616925298:android:051d2f5430327bb6f30ceb",
+        "android_client_info": {
+          "package_name": "com.kevin.antony.login_system"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "607616925298-aac5e8ct2mmhma9dbipubt9mdk6gnndv.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCg7GyeMGaL8k39iFx76yCBzvRxAK607DE"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "607616925298-aac5e8ct2mmhma9dbipubt9mdk6gnndv.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "607616925298-1rkjhsmi380bu40fa9qm0oqk6grbrhb2.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.kevin.antony.loginSystem"
+              }
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

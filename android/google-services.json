@@ -1,0 +1,82 @@
+{
+  "project_info": {
+    "project_number": "981558233351",
+    "project_id": "golf-score-sheet",
+    "storage_bucket": "golf-score-sheet.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:981558233351:android:3e2191beeab782eaa5dda2",
+        "android_client_info": {
+          "package_name": "com.kevin.antony.golfScoreSheet"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "981558233351-5g4in6n8sappm89g1bf2fsr2emnepq47.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAchPVwlAhAYzDZ9QWmqvElIS-n2DwWOu0"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "981558233351-5g4in6n8sappm89g1bf2fsr2emnepq47.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "981558233351-8c0rn4pbja8de7je8s0uc1cubmo14bvg.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.kevin.antony.golfScoreSheet"
+              }
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:981558233351:android:43305a1156ce92e3a5dda2",
+        "android_client_info": {
+          "package_name": "com.kevin.antony.login_system"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "981558233351-5g4in6n8sappm89g1bf2fsr2emnepq47.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAchPVwlAhAYzDZ9QWmqvElIS-n2DwWOu0"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "981558233351-5g4in6n8sappm89g1bf2fsr2emnepq47.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "981558233351-8c0rn4pbja8de7je8s0uc1cubmo14bvg.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.kevin.antony.golfScoreSheet"
+              }
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
