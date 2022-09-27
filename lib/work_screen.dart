@@ -9,6 +9,7 @@ class WorkPage extends StatefulWidget {
 }
 
 class _WorkPageState extends State<WorkPage> {
+  final user = FirebaseAuth.instance.currentUser!;
   @override
   Widget build(BuildContext context) {
     return Container(
@@ -16,7 +17,7 @@ class _WorkPageState extends State<WorkPage> {
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
-            Text("Your Logged in"),
+            Text("Your Logged in as " + user.email!),
             ElevatedButton(
                 onPressed: () async {
                   await FirebaseAuth.instance.signOut();
