@@ -1,9 +1,6 @@
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter_signin_button/button_list.dart';
-import 'package:flutter_signin_button/button_view.dart';
-import 'package:google_sign_in/google_sign_in.dart';
 
 class LoginPage extends StatefulWidget {
   const LoginPage({Key? key}) : super(key: key);
@@ -84,10 +81,21 @@ class _LoginPageState extends State<LoginPage> {
                 minimumSize: Size.fromHeight(50),
               ),
               onPressed: () async {
-                await FirebaseAuth.instance.signInWithEmailAndPassword(
-                    email: emailController.text.trim(),
-                    password: passwordController.text.trim());
-                Navigator.pushNamed(context, '/');
+                try {
+                  await FirebaseAuth.instance.signInWithEmailAndPassword(
+                      email: emailController.text.trim(),
+                      password: passwordController.text.trim());
+                  Navigator.pushNamed(context, '/');
+                } on FirebaseAuthException catch (e) {
+                  print(e);
+                  showDialog(
+                      context: context,
+                      builder: (context) {
+                        return AlertDialog(
+                          content: Text(e.message.toString()),
+                        );
+                      });
+                }
               },
               icon: Icon(
                 Icons.lock_open_outlined,
@@ -104,41 +112,9 @@ class _LoginPageState extends State<LoginPage> {
               },
               child: Text("New User? Create Account"),
             ),
-            SizedBox(
-              height: 20,
-            ),
-            //
-            SignInButton(
-              Buttons.Google,
-              onPressed: () {
-                final user = signInWithGoogle();
-                Navigator.pushNamed(context, '/');
-              },
-            ),
           ],
         ),
       ),
     );
-  }
-
-  Future<UserCredential> signInWithGoogle() async {
-    // Trigger the authentication flow
-    print("google sign in method");
-    final googleSignIn = GoogleSignIn();
-
-    final GoogleSignInAccount? googleUser = await GoogleSignIn().signIn();
-
-    // Obtain the auth details from the request
-    final GoogleSignInAuthentication? googleAuth =
-        await googleUser?.authentication;
-
-    // Create a new credential
-    final credential = GoogleAuthProvider.credential(
-      accessToken: googleAuth?.accessToken,
-      idToken: googleAuth?.idToken,
-    );
-
-    // Once signed in, return the UserCredential
-    return await FirebaseAuth.instance.signInWithCredential(credential);
   }
 }
