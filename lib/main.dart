@@ -1,8 +1,11 @@
 import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/material.dart';
+import 'package:login_system/login_page.dart';
+import 'package:login_system/new_user.dart';
 import 'package:login_system/second_page.dart';
 
 import 'firebase_options.dart';
+import 'forgot_password_page.dart';
 
 Future main() async {
   WidgetsFlutterBinding.ensureInitialized();
@@ -24,23 +27,13 @@ class MyApp extends StatelessWidget {
       theme: ThemeData(
         primarySwatch: Colors.blue,
       ),
-      home: SecondScreen(),
+      initialRoute: '/',
+      routes: {
+        '/': (context) => SecondScreen(),
+        '/register': (context) => NewUser(),
+        '/login': (context) => LoginPage(),
+        '/forgot': (context) => ForgotPassWordPage(),
+      },
     );
   }
 }
-
-// class MyHomePage extends StatefulWidget {
-//   const MyHomePage({super.key, required this.title});
-//
-//   final String title;
-//
-//   @override
-//   State<MyHomePage> createState() => _MyHomePageState();
-// }
-//
-// class _MyHomePageState extends State<MyHomePage> {
-//   @override
-//   Widget build(BuildContext context) {
-//     return
-//   }
-// }
